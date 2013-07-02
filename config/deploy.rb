@@ -1,5 +1,5 @@
 ##set :application, "geevs"
-set :repository,  "https://github.com/rubayte/geevs.git"
+set :repository,  "git@github.com:rubayte/geevs.git"
 set :user, "rrahman"
 set :use_sudo, false
 set :scm, :git
