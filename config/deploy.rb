@@ -1,8 +1,8 @@
 ##set :application, "geevs"
-set :repository,  "/Users/rrahman/Aptana\ Studio\ 3\ Workspace/geevsDemo_1"
+set :repository,  "https://github.com/rubayte/geevs.git"
 set :user, "rrahman"
 set :use_sudo, false
-set :scm, :none
+set :scm, :git
 #set :deploy_via, :remote_cache
 
 #set :scm, 'none' # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
@@ -29,7 +29,7 @@ after "deploy:bundle_gems", "deploy:restart"
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
    task :bundle_gems do
-     run "cd #{deploy_to} && bundle install vendor/gems"
+     run "cd #{deploy_to}/current && bundle install vendor/gems"
    end
    task :start do ; end
    task :stop do ; end
